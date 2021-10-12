@@ -32,9 +32,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function optimize(){
+        Artisan::call('route:clear');
+        Artisan::call('config:clear');
         Artisan::call('optimize');
-        Artisan::call('route:cache');
-        Artisan::call('config:cache');
         return "App optimized";
 
     }
