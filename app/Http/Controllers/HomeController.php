@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Artisan;
 
 class HomeController extends Controller
 {
@@ -44,7 +45,7 @@ class HomeController extends Controller
      */
     public function showloginform()
     {
-        return view('login');
+        return redirect('login');
     }
 
      /**
