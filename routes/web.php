@@ -12,33 +12,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', function() {
-      return view('home.index');
 
-});
-Route::get('/clear-cache', function() {
-    Artisan::call('optimize');
-    return "App optimized";
-});
+/*general routes*/
 
-Route::get('/', function () {
-    return view('auth.login');
-})->middleware('checkAuth');
-Route::get('/mail', function () {
-    return view('mailUsers');
-});
-Route::get('/setting', function () {
-    return view('setting');
-})->middleware('password.confirm','auth')->name('setd');
+Route::get('/home','HomeController@index')->name('home');
+Route::get('/clear-cache','HomeController@optimize')->name('optimize');
+Route::get('/', 'HomeController@showloginform')->middleware('checkAuth');
+Route::get('/mail', 'HomeController@mail')->middleware('auth');
+Route::get('/setting', 'HomeController@setting')->middleware('password.confirm','auth')->name('setd');
 Route::post('/change-password', 'SettingController@store')->middleware('auth')->name('change.password');
 Auth::routes();
-
-Route::get('/search', function () {
-    return view('search');
-})->name('search');
-
-
+Route::get('/search','HomeController@search')->name('search');
 Route::post('/sendPhoto','DashController@sendPhoto')->middleware('auth')->name('sendPhoto');
+
+/*general routes end*/
+
 
 /*Dash routes*/
 
