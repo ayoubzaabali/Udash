@@ -34,7 +34,6 @@ class HomeController extends Controller
     public function optimize(){
         Artisan::call('route:clear');
         Artisan::call('config:clear');
-        Artisan::call('optimize');
         return "App optimized";
 
     }
