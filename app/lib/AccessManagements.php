@@ -30,7 +30,7 @@ class AccessManagements
             session(['role' => 'admin']);
         }
        
-        session(['client' => Client::make('tika-app-1.24.1.jar')]);
+      //  session(['client' => Client::make('tika-app-1.24.1.jar')]);
 
     }
 }
