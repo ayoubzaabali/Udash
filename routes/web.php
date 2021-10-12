@@ -17,20 +17,20 @@ Route::get('/home', function() {
 
 });
 Route::get('/clear-cache', function() {
-    Artisan::call('cache:clear');
-    return "Cache is cleared";
+    Artisan::call('optimize');
+    return "App optimized";
 });
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->middleware('checkAuth');
 Route::get('/mail', function () {
     return view('mailUsers');
 });
 Route::get('/setting', function () {
     return view('setting');
 })->middleware('password.confirm','auth')->name('setd');
-Route::post('/change-password', 'SettingController@store')->name('change.password');
+Route::post('/change-password', 'SettingController@store')->middleware('auth')->name('change.password');
 Auth::routes();
 
 Route::get('/search', function () {
@@ -38,15 +38,15 @@ Route::get('/search', function () {
 })->name('search');
 
 
-Route::post('/sendPhoto','DashController@sendPhoto')->name('sendPhoto');
+Route::post('/sendPhoto','DashController@sendPhoto')->middleware('auth')->name('sendPhoto');
 
 /*Dash routes*/
 
-Route::get('/dash','DashController@index')->name('dash');
-Route::get('/CatagoriesByFiles','DashController@ListCatsFile')->name('dash.catsFiles');
-Route::get('/CatagoriesByUsers','DashController@ListCatsUser')->name('dash.ListCatsUsers');
-Route::get('/RecentFiles','DashController@RecentFiles')->name('RecentFiles');
-Route::get('/countFiles','DashController@FileCount')->name('FileCount');
+Route::get('/dash','DashController@index')->middleware('auth')->name('dash');
+Route::get('/CatagoriesByFiles','DashController@ListCatsFile')->middleware('auth')->name('dash.catsFiles');
+Route::get('/CatagoriesByUsers','DashController@ListCatsUser')->middleware('auth')->name('dash.ListCatsUsers');
+Route::get('/RecentFiles','DashController@RecentFiles')->middleware('auth')->name('RecentFiles');
+Route::get('/countFiles','DashController@FileCount')->middleware('auth')->name('FileCount');
 
 /*Dash routes end*/
 
