@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}"> 
-    <title>Edocs</title>
+    <title>Udash</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo asset('assets/media/image/favicon.png')  ?>" />
@@ -650,7 +650,7 @@
         <div class="navigation" style="overflow-y:scroll ;scrollbar-width: none;-ms-overflow-style: none;">
             <div class="logo">
                 <a href=index-2.html>
-                    <img  src="<?php echo asset('assets/media/image/logo.png')  ?>" >
+                    <img style="width:100%;height:auto;" src="<?php echo asset('assets/media/image/logo.png')  ?>" >
                 </a>
             </div>
             <ul>
@@ -747,7 +747,7 @@
             
             <!-- Footer -->
             <footer class="content-footer d-print-none">
-                <div>© 2020 ENSA TANGER - </div>
+                <div>© 2020 Ayoub Zaabali - </div>
               
             </footer>
             <!-- ./ Footer -->
