@@ -58,7 +58,7 @@
                 <div class="card-body text-center">
                     <div class="row mb-4">
                         <div class="col-md-8 offset-md-2">
-                            <img src="http://filedash.laborasyon.com/demos/orange/assets/media/svg/report.svg" class="img-fluid" alt="report">
+                            <img src="<?php echo asset('assets/media/image/report.svg')  ?>" class="img-fluid" alt="report">
                         </div>
                     </div>
                     <h4 class="my-3">Navigate Instances Page</h4>

@@ -482,7 +482,7 @@
                                                 <i class="ti-search"></i>
                                             </button>
                                         </div>
-                                        <input onclick="window.location.replace('http://docs.smart-ensa.com/I/search');" type="text" class="form-control" placeholder="Search">
+                                        <input onclick="window.location.replace('{{route('search')}}');" type="text" class="form-control" placeholder="Search">
                                         <div class="input-group-append">
                                             <button class="btn header-search-close-btn">
                                                 <i data-feather="x"></i>
@@ -558,7 +558,7 @@
                                 </div>
                                 <div class="list-group list-group-flush">
                                     <a href="{{route('setd')}}" class="list-group-item" >Settings</a>
-                                    <form method="post" action="http://docs.smart-ensa.com/I/logout" >
+                                    <form method="post" action="{{route('logout')}}" >
                                        @csrf
                                     <a href="#" onclick="this.closest('form').submit();" class="list-group-item text-danger"
                                       >Sign Out!</a>
@@ -764,7 +764,7 @@
                 </div>
                 <div class="sidebar-content">
              
-                            <img class="img-fluid" style="height:70%;  filter: drop-shadow(8px 8px 10px gray);;  opacity: 0.5;"  src="<?php echo asset('assets/media/image/myGif.gif')  ?>"  alt="upgrade">
+                            <img class="img-fluid" style="background-size:cover;height:50%;width:100%"  src="<?php echo asset('assets/media/image/myGif.gif')  ?>"  alt="upgrade">
                             
                     
                 </div>
