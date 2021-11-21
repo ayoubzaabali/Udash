@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 /*general routes*/
 
-Route::get('/home','HomeController@index')->name('home');
+Route::get('/','HomeController@index')->name('home');
 Route::get('/clear-cache','HomeController@optimize')->name('optimize');
-Route::get('/', 'HomeController@showloginform')->middleware('checkAuth');
+Route::get('/login', 'HomeController@showloginform')->middleware('checkAuth');
 Route::get('/mail', 'HomeController@mail')->middleware('auth');
 Route::get('/setting', 'HomeController@setting')->middleware('password.confirm','auth')->name('setd');
 Route::post('/change-password', 'SettingController@store')->middleware('auth')->name('change.password');
