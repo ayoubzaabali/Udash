@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="guys">
-            <img src="{{asset('assets/media/image/men1.png')}}" alt="image not found">
+            <img loading="lazy" decoding="async" height="650" width="280" src="{{asset('assets/media/image/men1.png')}}" alt="image not found">
         </div>
     </div>
 
