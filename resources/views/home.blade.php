@@ -1,10 +1,12 @@
 @extends('layouts.homePage')
 
 @section('main')
+<div class="up">Collaborate in real-time, in any document, from anywhere
+    . <a href="{{Route('login')}}">Check Now!</a></div>
 <div id="firstSection">
     <div class="container">
         <nav>
-            <div id="logo">UDASH</div>
+            <div id="logo">Udash</div>
             <div id="navbar">
                 <ul>
                     <li>Discover</li>
@@ -16,29 +18,185 @@
             <div id="button"><button>Sign-in</button></div>
         </nav>
     </div>
-    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 150" version="1.1"
-        xmlns="http://www.w3.org/2000/svg">
-        <path style="transform:translate(0, 0px); opacity:1" fill="#fff"
-            d="M0,75L12,65C24,55,48,35,72,42.5C96,50,120,85,144,102.5C168,120,192,120,216,120C240,120,264,120,288,100C312,80,336,40,360,35C384,30,408,60,432,67.5C456,75,480,60,504,65C528,70,552,95,576,107.5C600,120,624,120,648,122.5C672,125,696,130,720,117.5C744,105,768,75,792,60C816,45,840,45,864,57.5C888,70,912,95,936,97.5C960,100,984,80,1008,60C1032,40,1056,20,1080,10C1104,0,1128,0,1152,22.5C1176,45,1200,90,1224,95C1248,100,1272,65,1296,62.5C1320,60,1344,90,1368,102.5C1392,115,1416,110,1440,95C1464,80,1488,55,1512,50C1536,45,1560,60,1584,60C1608,60,1632,45,1656,45C1680,45,1704,60,1716,67.5L1728,75L1728,150L1716,150C1704,150,1680,150,1656,150C1632,150,1608,150,1584,150C1560,150,1536,150,1512,150C1488,150,1464,150,1440,150C1416,150,1392,150,1368,150C1344,150,1320,150,1296,150C1272,150,1248,150,1224,150C1200,150,1176,150,1152,150C1128,150,1104,150,1080,150C1056,150,1032,150,1008,150C984,150,960,150,936,150C912,150,888,150,864,150C840,150,816,150,792,150C768,150,744,150,720,150C696,150,672,150,648,150C624,150,600,150,576,150C552,150,528,150,504,150C480,150,456,150,432,150C408,150,384,150,360,150C336,150,312,150,288,150C264,150,240,150,216,150C192,150,168,150,144,150C120,150,96,150,72,150C48,150,24,150,12,150L0,150Z">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,320L40,293.3C80,267,160,213,240,202.7C320,192,400,224,480,213.3C560,203,640,149,720,128C800,107,880,117,960,138.7C1040,160,1120,192,1200,208C1280,224,1360,224,1400,224L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
         </path>
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="579" height="579" viewBox="0 0 579 579">
-  <defs>
-    <filter id="Rectangle_526" x="0" y="0" width="579" height="579" filterUnits="userSpaceOnUse">
-      <feOffset dy="31" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="13" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_526)">
-    <g id="Rectangle_526-2" data-name="Rectangle 526" transform="translate(39 8)" fill="#fff" stroke="rgba(254,88,88,0.25)" stroke-width="6">
-      <rect width="501" height="501" rx="18" stroke="none"/>
-      <rect x="3" y="3" width="495" height="495" rx="15" fill="none"/>
-    </g>
-  </g>
-</svg>
+
+    <div class="first-content">
+        <div class="container content">
+            <h5>Udash</h5>
+            <h2>It’s Time To Give Your Business</h2>
+            <h1>A Futuristic Spin</h1>
+            <h3>Host Any Software On Our Secured Cloud Now</h3>
+            <div class="btns">
+                <button>Try for Free</button>
+                <button>See Plans & Offers</button>
+            </div>
+        </div>
+        <div class="guys">
+            <img src="{{asset('assets/media/image/men1.png')}}" alt="image not found">
+        </div>
+    </div>
+
+    <div id="img-list">
+        <h4>Trusted By :</h4>
+        <img src="{{asset('assets/media/image/company/img1.png')}}" alt="image not found">
+        <img src="{{asset('assets/media/image/company/img2.png')}}" alt="image not found">
+        <img src="{{asset('assets/media/image/company/img3.png')}}" alt="image not found">
+        <img src="{{asset('assets/media/image/company/img4.png')}}" alt="image not found">
+        <img src="{{asset('assets/media/image/company/img5.png')}}" alt="image not found">
+    </div>
 
 </div>
+
+
+
+<!-- why us -->
+<div id="section2">
+
+    <div class="container">
+
+        <h1 class="h1">Why Using <span>Udash?</span></h1>
+        <div class="content">
+
+            <div>
+
+                <ul>
+                    <li>Always On support</li>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consectetur iusto quia
+                        dignissimos tempore accusamus maxime in, eligendi quod, eius ea voluptatibus incidunt neque
+                        voluptatum eos doloribus eveniet veritatis ipsam aspernatur? Iusto non pariatur dolor.</p>
+                </ul>
+
+            </div>
+            <div><img id="img" src="{{asset('assets/media/image/cloud.png')}}" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<!-- end why us -->
+
+
+
+<!-- testimonials section -->
+
+<div id="section4">
+
+    <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1" d="M0,160L720,128L1440,160L1440,0L720,0L0,0Z"></path>
+    </svg>
+
+
+        <div class="testimonials-section">
+        <h1 style="position:absolute;top:0;" class="h1">Customer <span style="color:#fff">Testimonials</span></h1>
+
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+            <input type="radio" name="slider" title="slide2" class="slider__nav" />
+            <input type="radio" name="slider" title="slide3" class="slider__nav" />
+            <input type="radio" name="slider" title="slide4" class="slider__nav" />
+            <input type="radio" name="slider" title="slide5" class="slider__nav" />
+            <div class="slider__inner">
+                <div class="slider__contents">
+                    <quote>&rdquo;</quote>
+                    <p class="slider__txt">We love you guys. It's easy to order, we get shipments quick and my rep
+                        solves tough
+                        problems the right way. We get answers that work.</p>
+                    <h2 class="slider__caption">Rhonda | NylonCraft</h2>
+                </div>
+                <div class="slider__contents">
+                    <quote>&rdquo;</quote>
+                    <p class="slider__txt">You all bend over backwards to get it done. Inside sales and the Account
+                        Managers are
+                        great! It's your service...you all know that it's not just about taking orders it's about
+                        service. Why
+                        do we choose you guys - your people, your prices, you're quick and you have a ton of technical
+                        knowledge.</p>
+                    <h2 class="slider__caption">Jared | Rexam</h2>
+                </div>
+                <div class="slider__contents">
+                    <quote>&rdquo;</quote>
+                    <p class="slider__txt">It's the long-term relationship we have with Proheat that keeps me calling
+                        you guys.
+                        I trust you, you're quick, and everybody I've ever spoken to there are all great people. Our
+                        CEO, Bill,
+                        talks about building relationships. That's exactly what Proheat does, and I couldn't be happier.
+                    </p>
+                    <h2 class="slider__caption">Chris | C&M Fine Pack</h2>
+                </div>
+                <div class="slider__contents">
+                    <quote>&rdquo;</quote>
+                    <p class="slider__txt">You answer my questions, always takes care of problems, and I never have a
+                        hassle.
+                    </p>
+                    <h2 class="slider__caption">Rex | LNP Engineering Plastics</h2>
+                </div>
+                <div class="slider__contents">
+                    <quote>&rdquo;</quote>
+                    <p class="slider__txt">Proheat's staff are all so friendly and everybody goes above and beyond.
+                        Everyone is
+                        courteous, everything is quick and you get us what we need. I have to shop around for everything
+                        and we
+                        ALWAYS come back to Proheat.</p>
+                    <h2 class="slider__caption">Darlene | Russel Stover</h2>
+                </div>
+            </div>
+        </div>
+    <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1" d="M0,160L720,128L1440,160L1440,320L720,320L0,320Z"></path>
+    </svg>
+</div>
+<!-- end testimonials section -->
+
+
+
+<!-- question section -->
+
+<div id="section3">
+    <div class="container">
+        <h1 class="h1">Any Questions For <span>US?</span></h1>
+        <div class="content">
+            <div class="one"></div>
+            <div class="two">
+
+            </div>
+            <div class="tree"></div>
+        </div>
+    </div>
+</div>
+<!-- question section end -->
+
+
+<!-- contact us section -->
+<div class="container">
+    <div style="text-align:center">
+        <h1 class="h1">Contact Us</h1>
+        <p>Swing by for a cup of coffee, or leave us a message:</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="{{asset('assets/media/image/map.jpg')}}" style="width:100%">
+        </div>
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- end contact us section -->
 @endsection
