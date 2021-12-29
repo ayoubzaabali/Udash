@@ -16,8 +16,8 @@
 
 <!--  for company name and description -->
     <div class="footer-items">
-      <h1>Company Name</h1>
-      <p>Description of any product or motto of the company.</p>
+      <h1>Udash</h1>
+      <p>Best Business Cloud Storage and File Sharing Providers ; Best for Advanced Storage.</p>
     </div>
 
 <!--  for quick links  -->
@@ -34,7 +34,7 @@
 
 <!--  for some other links -->
     <div class="footer-items">
-      <h3>Recipes</h3>
+      <h3>Our partners</h3>
       <div class="border1"></div>  <!--for the underline -->
         <ul>
           <a href="#"><li>Indian</li></a>
