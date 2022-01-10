@@ -36,9 +36,18 @@
             </div>
         </div>
         <div class="guys">
-            <img class="asyncImage" src="{{asset('assets/media/image/men1.png')}}"
+
+            <img class="asyncImage display" src="{{asset('assets/media/image/men1.png')}}"
                 data-src="{{asset('assets/media/image/men1.png')}}" loading="lazy" decoding="async" height="650"
                 width="280" alt="Beautiful landscape sunrise">
+
+            <img class="asyncImage" src="{{asset('assets/media/image/men.png')}}"
+                data-src="{{asset('assets/media/image/men.png')}}" loading="lazy" decoding="async" height="650"
+                width="480" alt="Beautiful landscape sunrise">
+
+            <img class="asyncImage" src="{{asset('assets/media/image/men3.png')}}"
+                data-src="{{asset('assets/media/image/men3.png')}}" loading="lazy" decoding="async" height="650"
+                width="380" alt="Beautiful landscape sunrise">
         </div>
         <script>
         (() => {
@@ -58,6 +67,28 @@
                 };
             });
         })();
+        window.onload=async ()=>{
+        let guys= document.querySelector(".guys")
+          let img= guys.children
+          let i=0;
+          setInterval(() => {
+            removeDisplays(img);
+            img[i].classList.toggle("display");
+            i++;
+            if(i==img.length)
+            i=0;
+            
+          }, 4000);
+
+
+          function removeDisplays(img){
+              for(let i=0;i<img.length;i++){
+               if(img[i].classList.contains("display"))
+               img[i].classList.remove("display");
+              }
+          }
+          
+        }
         </script>
     </div>
 
