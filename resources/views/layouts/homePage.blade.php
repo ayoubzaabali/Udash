@@ -6,6 +6,8 @@
     <link rel="stylesheet" href='{{asset('css/home.css')}}?v={{Str::random(5)}}' >
 </head>
 <body>
+<div class="preloader"> <img class="preloader-icon" src="{{asset('assets/media/image/favicon.png')}}" alt="My Site Preloader"> </div>
+
     <div id="main">
         @yield('main')
     </div>
@@ -71,7 +73,13 @@
   
 <!--   Footer Bottom end -->
   
-</body>    
+</body>  
+<script>
+
+window.onload = function(){ document.querySelector(".preloader").style.display = "none"; }
+
+
+</script>  
 <script src="https://unpkg.com/vue@next"></script>
 <script src="{{asset('js/home.js')}}"></script>
 </html>
