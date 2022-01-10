@@ -68,6 +68,7 @@
             });
         })();
         window.onload=async ()=>{
+        document.querySelector(".preloader").style.display = "none"; 
         let guys= document.querySelector(".guys")
           let img= guys.children
           let i=0;

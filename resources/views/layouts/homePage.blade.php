@@ -74,12 +74,6 @@
 <!--   Footer Bottom end -->
   
 </body>  
-<script>
-
-window.onload = function(){ document.querySelector(".preloader").style.display = "none"; }
-
-
-</script>  
 <script src="https://unpkg.com/vue@next"></script>
 <script src="{{asset('js/home.js')}}"></script>
 </html>
