@@ -24,6 +24,7 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -123,35 +124,174 @@ svg {
     margin-left: auto;
 }
 
-@media only screen and (min-width: 768px) {
-    #firstSection {
-        width: 100%;
-        height: 800px;
+#mydivheader {
+    height: 30px;
+    cursor: move;
+    z-index: 10;
+    color: #fff;
+    cursor: move;
+    z-index: 1;
+    color: black;
+}
+
+#mydivheader svg {
+    width: 100%;
+    font-size: 20px;
+    color: black
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    width: auto;
+    max-width: 70px;
+    height: auto;
+    z-index: 100;
+    display: block;
+    background: #fff;
+    border: 1px solid var(--light-color);
+}
+
+.sidevis {
+    visibility: hidden;
+    animation-name: opt;
+    animation-duration: 1s;
+}
+
+@keyframes opt {
+    0% {
+        opacity: 1;
     }
-    #firstSection svg {
-        position: absolute;
-        bottom: 0;
-        visibility: visible !important;
+    100% {
+        opacity: 0;
     }
-    #firstSection nav {
-        display: flex;
-        flex-direction: row;
-        color: #fff;
-        margin-top: 30px;
-    }
-    #firstSection #navbar {
-        flex: 0%;
-    }
+}
+
+.sidebar .navit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 10px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sidebar .navit svg:hover {
+    color: var(--fill-color);
+}
+
+.sidebar .navit svg {
+    font-size: 25px;
+    color: var(--dark-color);
+}
+
+.sidebar .navit a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+.sidebar .navit a:hover {
+    color: var(--fill-color);
 }
 
 #firstSection {
     background-image: linear-gradient(to left, var(--light-color), var(--dark-color));
-    /* width: 100%;
-    height: 800px; */
-    /* background-size: 400% 400%;
-    animation: gradient 15s ease infinite; */
+    width: 100%;
+    height: 800px;
     padding-top: 30px;
     position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .content img {
+        display: block !important;
+    }
+    .first-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-self: center;
+        justify-content: center;
+    }
+    .first-content .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-self: center;
+        justify-content: center;
+    }
+    #img-list,
+    .up,
+    .guys,
+    nav #navbar,
+    #mydivheader,
+    .navit:nth-child(2),
+    #firstSection .first-content h5,
+    #firstSection .first-content h2,
+    #firstSection svg {
+        display: none !important;
+    }
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: unset;
+        height: 50px;
+        z-index: 100;
+        background-color: var(--dark-color);
+        align-self: center;
+        justify-content: center;
+        padding: 10px 0;
+        visibility: visible !important;
+    }
+    .sidebar .navit svg,
+    .sidebar .navit a {
+        color: #fff;
+    }
+    .sidebar .navit a {
+        font-size: 13px;
+    }
+    #firstSection {
+        height: 80vh;
+        padding: 0 !important;
+        background: #fff;
+    }
+    #firstSection .first-content {
+        padding: 0 !important;
+    }
+    #firstSection .first-content h1,
+    #firstSection .first-content h2,
+    #firstSection .first-content h3,
+    nav #logo {
+        color: var(--fill-color);
+    }
+    #firstSection .first-content .content .btns button:nth-child(1) {
+        background-image: linear-gradient(to right, var(--light-color), var(--dark-color));
+        margin-right: 10px;
+    }
+    #firstSection .first-content .content .btns button:nth-child(2),
+    #button button {
+        border: 1px solid !important;
+        border-image-slice: 1 !important;
+        border-width: 3px !important;
+        border-image-source: linear-gradient(to right, var(--light-color), var(--dark-color)) !important;
+        margin-right: 0;
+    }
+    #firstSection .first-content .content .btns button {
+        padding: 13px 17px !important;
+        border-radius: 0 !important;
+    }
 }
 
 @keyframes gradient {
@@ -168,21 +308,22 @@ svg {
 
 #firstSection nav {
     color: #fff;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    margin-top: 30px;
 }
 
 #firstSection svg {
-    visibility: hidden;
+    position: absolute;
+    bottom: 0;
 }
 
 
 /* navbarstylyng */
 
-#firstSection #navbar,
 #firstSection #navbar {
     text-align: center;
-}
-
-#firstSection #navbar {
     flex: 70%;
 }
 
@@ -199,6 +340,7 @@ svg {
     float: right;
     font-size: 15px;
     padding: 13px 30px;
+    white-space: nowrap;
 }
 
 #logo {
@@ -325,12 +467,15 @@ svg {
     color: #fff;
     padding: 15px 0;
     opacity: .9;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+}
+
+.upan {
     animation: updown 2s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
 }
 
 @keyframes updown {
@@ -833,6 +978,20 @@ quote {
     border: 1px solid #fff;
 }
 
+@media screen and (max-width: 600px) {
+    #section3 .content {
+        flex-direction: column;
+        height: 500px;
+        margin: 0
+    }
+    #section3 .content div {
+        height: auto;
+    }
+    #section3 .content .tree button {
+        margin-right: 0;
+    }
+}
+
 
 /* why us end */
 
@@ -855,11 +1014,18 @@ quote {
         flex-direction: column;
         width: 100%;
     }
-    #section2 .container {
-        padding-right: unset;
-        padding-left: unset;
-        margin-right: unset;
-        margin-left: unset;
+    #section2 {
+        height: 100vh;
+        padding: 60px 0;
+    }
+    #section2 .content div {
+        padding: 20px 0 !important;
+    }
+    #section2 .content div:nth-child(2) {
+        display: none;
+    }
+    #section2 .content div:nth-child(1) {
+        flex: 100%;
     }
 }
 
@@ -916,3 +1082,18 @@ quote {
 
 
 /* question section end */
+
+
+/* reveal animation */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}

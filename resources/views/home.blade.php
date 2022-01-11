@@ -18,7 +18,7 @@
             <div id="button"><button>Sign-in</button></div>
         </nav>
     </div>
-    <svg viewBox="0 0 1440 320">
+    <svg viewBox="0 0 1440 320" class="reveal">
         <path fill="#fff" fill-opacity="1"
             d="M0,320L40,293.3C80,267,160,213,240,202.7C320,192,400,224,480,213.3C560,203,640,149,720,128C800,107,880,117,960,138.7C1040,160,1120,192,1200,208C1280,224,1360,224,1400,224L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
         </path>
@@ -30,6 +30,7 @@
             <h2>It’s Time To Give Your Business</h2>
             <h1>A Futuristic Spin</h1>
             <h3>Share Any Document On Our Secured Cloud Now</h3>
+            <img style="max-height:200px;margin-top:auto;animation: shake 1.5s infinite;display:none"src="{{asset('assets/media/image/pngegg (5).png')}}" alt="">
             <div class="btns">
                 <button>Try for Free</button>
                 <button>See Plans & Offers</button>
@@ -38,7 +39,7 @@
         <div class="guys">
 
             <img class="asyncImage display" src="{{asset('assets/media/image/men1.png')}}"
-                data-src="{{asset('assets/media/image/men1.png')}}" loading="lazy" decoding="async" height="650"
+                data-src="{{asset('assets/media/image/men1.png')}}" loading="lazy" decoding="async" height="630"
                 width="280" alt="Beautiful landscape sunrise">
 
             <img class="asyncImage" src="{{asset('assets/media/image/men.png')}}"
@@ -46,7 +47,7 @@
                 width="480" alt="Beautiful landscape sunrise">
 
             <img class="asyncImage" src="{{asset('assets/media/image/men3.png')}}"
-                data-src="{{asset('assets/media/image/men3.png')}}" loading="lazy" decoding="async" height="650"
+                data-src="{{asset('assets/media/image/men3.png')}}" loading="lazy" decoding="async" height="630"
                 width="380" alt="Beautiful landscape sunrise">
         </div>
         <script>
@@ -67,29 +68,6 @@
                 };
             });
         })();
-        window.onload=async ()=>{
-        document.querySelector(".preloader").style.display = "none"; 
-        let guys= document.querySelector(".guys")
-          let img= guys.children
-          let i=0;
-          setInterval(() => {
-            removeDisplays(img);
-            img[i].classList.toggle("display");
-            i++;
-            if(i==img.length)
-            i=0;
-            
-          }, 4000);
-
-
-          function removeDisplays(img){
-              for(let i=0;i<img.length;i++){
-               if(img[i].classList.contains("display"))
-               img[i].classList.remove("display");
-              }
-          }
-          
-        }
         </script>
     </div>
 
@@ -104,19 +82,17 @@
 
 </div>
 
-
-
 <!-- why us -->
 <div id="section2">
 
     <div class="container">
 
-        <h1 class="h1">Why Using <span>Udash?</span></h1>
+        <h1 class="h1 reveal">Why Using <span>Udash?</span></h1>
         <div class="content">
 
             <div>
 
-                <ul>
+                <ul class="reveal">
                     <li>Always On support</li>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consectetur iusto quia
                         dignissimos tempore accusamus maxime in, eligendi quod, eius ea voluptatibus incidunt neque
@@ -124,7 +100,7 @@
                 </ul>
 
             </div>
-            <div><img id="img" src="{{asset('assets/media/image/cloud.png')}}" alt=""></div>
+            <div class="reveal"><img id="img" src="{{asset('assets/media/image/cloud.png')}}" alt=""></div>
         </div>
     </div>
 </div>
@@ -137,13 +113,13 @@
 
 <div id="section4">
 
-    <svg class="svg1" viewBox="0 0 1440 320">
+    <svg  class="svg1"  viewBox="0 0 1440 320">
         <path fill="#fff" fill-opacity="1" d="M0,160L720,128L1440,160L1440,0L720,0L0,0Z"></path>
     </svg>
 
 
     <div class="testimonials-section">
-        <h1 style="position:absolute;top:0;" class="h1">Customer <span style="color:#fff">Testimonials</span></h1>
+        <h1 style="position:absolute;top:0;" class="h1 reveal">Customer <span style="color:#fff">Testimonials</span></h1>
 
         <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
         <input type="radio" name="slider" title="slide2" class="slider__nav" />
@@ -151,7 +127,7 @@
         <input type="radio" name="slider" title="slide4" class="slider__nav" />
         <input type="radio" name="slider" title="slide5" class="slider__nav" />
         <div class="slider__inner">
-            <div class="slider__contents">
+            <div class="slider__contents reveal">
                 <quote>&rdquo;</quote>
                 <img src="{{asset('assets/media/image/user/man_avatar1.jpg')}}" style="width:100%">
                 <p class="slider__txt">We love you guys. It's easy to order, we get shipments quick and my rep
@@ -159,7 +135,7 @@
                     problems the right way. We get answers that work.</p>
                 <h2 class="slider__caption">Rhonda | NylonCraft</h2>
             </div>
-            <div class="slider__contents">
+            <div class="slider__contents reveal">
                 <quote>&rdquo;</quote>
                 <img src="{{asset('assets/media/image/user/man_avatar2.jpg')}}" style="width:100%">
                 <p class="slider__txt">You all bend over backwards to get it done. Inside sales and the Account
@@ -170,7 +146,7 @@
                     knowledge.</p>
                 <h2 class="slider__caption">Jared | Rexam</h2>
             </div>
-            <div class="slider__contents">
+            <div class="slider__contents reveal">
                 <quote>&rdquo;</quote>
                 <img src="{{asset('assets/media/image/user/man_avatar3.jpg')}}" style="width:100%">
                 <p class="slider__txt">It's the long-term relationship we have with Proheat that keeps me calling
@@ -181,7 +157,7 @@
                 </p>
                 <h2 class="slider__caption">Chris | C&M Fine Pack</h2>
             </div>
-            <div class="slider__contents">
+            <div class="slider__contents reveal">
                 <quote>&rdquo;</quote>
                 <img src="{{asset('assets/media/image/user/man_avatar4.jpg')}}" style="width:100%">
                 <p class="slider__txt">You answer my questions, always takes care of problems, and I never have a
@@ -189,7 +165,7 @@
                 </p>
                 <h2 class="slider__caption">Rex | LNP Engineering Plastics</h2>
             </div>
-            <div class="slider__contents">
+            <div class="slider__contents reveal">
                 <quote>&rdquo;</quote>
                 <img src="{{asset('assets/media/image/user/man_avatar5.jpg')}}" style="width:100%">
                 <p class="slider__txt">Proheat's staff are all so friendly and everybody goes above and beyond.
@@ -215,7 +191,7 @@
 
 <div id="section3">
     <div class="container">
-        <div class="content">
+        <div class="content reveal">
             <div class="one"></div>
             <div class="two">
                 <ul>
@@ -223,13 +199,13 @@
                         <h1>Have Questions ?</h1>
                     </li>
                     <li>
-                        <h1>Ask Our Solutions Consultant</h1>
+                        <h1 >Ask Our Solutions Consultant</h1>
                     </li>
                     <li>
                         <hr style="width:30%;text-align:left;margin-left:0; height: 3px;background: grey;">
                     </li>
                     <li>
-                        <h2>Call Us +1 (XXX) XXX-XXXX</h2>
+                        <h2 >Call Us +1 (XXX) XXX-XXXX</h2>
                     </li>
                 </ul>
             </div>
@@ -243,7 +219,7 @@
 <!-- contact us section -->
 
 <div style="text-align:center">
-    <h1 style="margin-bottom:70px" class="h1">Contact Us <span>Now</span></h1>
+    <h1 style="margin-bottom:70px" class="h1 reveal">Contact Us <span>Now</span></h1>
 </div>
 <div class="row">
     <div class="top"></div>
