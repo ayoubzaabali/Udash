@@ -16,25 +16,25 @@
 
 <body>
     <div id="sidebar" class="sidebar sidevis" draggable="true">
-        <div id="mydivheader"><i class="fas fa-grip-horizontal"></i></div>
+        <div id="mydivheader"><i class="fas fa-arrows-alt"></i></div>
         <div class="navit">
             <img src="{{asset('assets/media/image/favicon.png')}}" alt="" width=80>
         </div>
         <div class="navit">
             <i class="fab fa-cc-discover"></i>
-            <label><a href="#">Discover</a></label>
+            <label><a href="#firstSection">Home</a></label>
         </div>
         <div class="navit">
             <i class="fas fa-braille"></i>
-            <label><a href="#">Our Plans</a></label>
+            <label><a href="#section4">Testimonials</a></label>
         </div>
         <div class="navit">
             <i class="far fa-address-book"></i>
-            <label><a href="#">Contact Us</a></label>
+            <label><a href="#contact">Contact Us</a></label>
         </div>
         <div class="navit">
             <i class="fas fa-eject"></i>
-            <label><a href="#">About us</a></label>
+            <label><a href="#section2">About us</a></label>
         </div>
     </div>
     <div class="preloader"> <img class="preloader-icon" src="{{asset('assets/media/image/favicon.png')}}"
@@ -59,64 +59,45 @@
                 <div class="border1"></div>
                 <!--for the underline -->
                 <ul>
-                    <a href="#">
+                    <a href="#firstSection">
                         <li>Home</li>
                     </a>
-                    <a href="#">
-                        <li>Search</li>
+                    <a href="#section4">
+                        <li>Testimonials</li>
                     </a>
-                    <a href="#">
+                    <a href="#contact">
                         <li>Contact</li>
                     </a>
-                    <a href="#">
+                    <a href="#section2">
                         <li>About</li>
                     </a>
                 </ul>
             </div>
 
-            <!--  for some other links -->
-            <div class="footer-items">
-                <h3>Our partners</h3>
-                <div class="border1"></div>
-                <!--for the underline -->
-                <ul>
-                    <a href="#">
-                        <li>Indian</li>
-                    </a>
-                    <a href="#">
-                        <li>Chinese</li>
-                    </a>
-                    <a href="#">
-                        <li>Mexican</li>
-                    </a>
-                    <a href="#">
-                        <li>Italian</li>
-                    </a>
-                </ul>
-            </div>
+      
 
             <!--  for contact us info -->
             <div class="footer-items">
                 <h3>Contact us</h3>
                 <div class="border1"></div>
                 <ul>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com</li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>  287 Lost Creek Road</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>  Philadelphia</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i>  jennifer@udash.com</li>
                 </ul>
-
-                <!--   for social links -->
-                <div class="social-media">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                </div>
             </div>
+
+                <!--  eye catchy image -->
+           <div class="footer-items">
+               <img  src="{{asset('assets/media/image/myGif.gif')}}" alt="">
+            </div>
+            
         </div>
+
 
         <!--   Footer Bottom start  -->
         <div class="footer-bottom">
-            Copyright &copy; Food and Burps 2020.
+            Copyright &copy; Udash {{ now()->year }}.
         </div>
     </div>
 

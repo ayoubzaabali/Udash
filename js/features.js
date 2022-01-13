@@ -1,4 +1,45 @@
 window.onload = async() => {
+
+    // phone click
+    let icons = document.querySelectorAll("div.navit svg");
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].onclick = (evt) => {
+            let elem = evt.target.closest("svg").nextElementSibling.firstElementChild
+            elem.click()
+        }
+    }
+    let side = document.querySelector("#sidebar");
+    if (window.pageYOffset < 100) {
+        side.classList.remove("sidevis")
+    } else {
+        side.classList.add("sidevis")
+    }
+
+
+    // testemenials automatic iteration
+    var checkboxes = document.querySelectorAll("input[type='radio']");
+    var index = 0;
+    setInterval(geitdone, 2000)
+
+    function geitdone() {
+        let item = checkboxes[index]
+        console.log(item);
+        item.checked = true;
+        index++;
+        if (index == checkboxes.length)
+            index = 0;
+    }
+    // nice scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // preloade hide
     document.querySelector(".preloader").style.display = "none";
 
@@ -103,11 +144,17 @@ function handleTabletChange(e) {
         // Then log the following message to the console
         let side = document.querySelector("#sidebar");
         window.onscroll = () => {
-            console.log('Full document height, with scrolled out part: ' + window.pageYOffset);
             if (window.pageYOffset < 100) {
-                side.classList.add("sidevis")
-            } else {
                 side.classList.remove("sidevis")
+            } else {
+                side.classList.add("sidevis")
+                let icons = document.querySelectorAll("div.navit svg");
+                for (let i = 0; i < icons.length; i++) {
+                    icons[i].onclick = (evt) => {
+                        let elem = evt.target.closest("svg").nextElementSibling.firstElementChild
+                        elem.click()
+                    }
+                }
             }
         }
 
@@ -119,4 +166,4 @@ function handleTabletChange(e) {
 mediaQuery.addListener(handleTabletChange)
 
 // Initial check
-handleTabletChange(mediaQuery)
+handleTabletChange(mediaQuery);
