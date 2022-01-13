@@ -38,7 +38,7 @@
         </div>
         <div class="guys">
 
-            <img class="asyncImage display" src="{{asset('assets/media/image/men1.png')}}"
+            <img class="asyncImage display" src="{{asset('assets/media/image/men1-min.png')}}"
                 data-src="{{asset('assets/media/image/men1.png')}}" loading="lazy" decoding="async" height="630"
                 width="280" alt="Beautiful landscape sunrise">
 
