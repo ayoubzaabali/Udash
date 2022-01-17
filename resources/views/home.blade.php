@@ -39,14 +39,16 @@
         </div>
         <div class="guys">
 
-          
+            <img class="asyncImage display" src="{{asset('assets/media/image/men1-min.webp')}}"
+                data-src="{{asset('assets/media/image/men1.webp')}}" loading="lazy" decoding="async" height="630"
+                width="280" alt="Beautiful landscape sunrise">
 
-            <img class="asyncImage" src="{{asset('assets/media/image/men.png')}}"
-                data-src="{{asset('assets/media/image/men.png')}}" loading="lazy" decoding="async" height="650"
+            <img class="asyncImage" src="{{asset('assets/media/image/men.webp')}}"
+                data-src="{{asset('assets/media/image/men.webp')}}" loading="lazy" decoding="async" height="650"
                 width="480" alt="Beautiful landscape sunrise">
 
-            <img class="asyncImage" src="{{asset('assets/media/image/men3.png')}}"
-                data-src="{{asset('assets/media/image/men3.png')}}" loading="lazy" decoding="async" height="630"
+            <img class="asyncImage" src="{{asset('assets/media/image/men3.webp')}}"
+                data-src="{{asset('assets/media/image/men3.webp')}}" loading="lazy" decoding="async" height="630"
                 width="380" alt="Beautiful landscape sunrise">
         </div>
         <script>
@@ -99,7 +101,7 @@
                 </ul>
 
             </div>
-            <div class="reveal"><img id="img" src="{{asset('assets/media/image/cloud.png')}}" alt=""></div>
+            <div class="reveal"><img id="img" src="{{asset('assets/media/image/cloud.webp')}}" alt=""></div>
         </div>
     </div>
 </div>
