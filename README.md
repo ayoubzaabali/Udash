@@ -1,9 +1,7 @@
-Sokoban Solver
+Udash - laravel
 ==============
 
-Forrest Knight
-
-CS 480 - Artificial Intelligence - Fall 2017
+A simple application for a university admin to connect students and professors and simplify file sharing between them.
 
 Usage
 -----
@@ -12,33 +10,14 @@ Testing the Project
 
     cd <project_folder>
     composer install
-    
 
-Input
------
-
-The Sokoban files must be in the following format.
-
-    [Number of columns]
-    [Number of rows]
-    [Rest of the puzzle]
-
-With the following state mappings (note that when the player or box is on the
-  goal, the mapping changes).
-
-    0   (hash)      Wall (Obstacle)
-    S   (period)    Empty goal (Storage)
-    R   (at)        Player on floor (Robot)
-    \+  (plus)      Player on goal
-    B   (dollar)    Box on floor (Block)
-    \*  (asterisk)  Box on goal
-
-Output
+screenshots 
 ------
 
-The output is in the following format.
+functionality overview with screenshots.
 
     1. String representation of initial state
+    ![landing page](https://user-images.githubusercontent.com/78790570/153942068-ac66784c-65b5-46f0-ba01-4fef305a353c.png)
     2. String representation of the final state
     3. Move solution
     4. Number of nodes explored
