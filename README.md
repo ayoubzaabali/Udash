@@ -10,6 +10,7 @@ Testing the Project
 
     cd <project_folder>
     composer install
+    php artisan migrate
 
 screenshots 
 ------
