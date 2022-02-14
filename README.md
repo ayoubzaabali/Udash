@@ -25,14 +25,14 @@ functionality overview with screenshots.
  
 ![html css vue javascript login page](https://user-images.githubusercontent.com/78790570/153943025-840d23e7-18c6-460b-a7ac-24a9c8c74b74.png)
 
- <h3 align="left">admin  Dashboard:</h3>
+ <h3 align="left">Admin Dashboard:</h3>
 
  
 ![html css vue javascript dashboard page](https://user-images.githubusercontent.com/78790570/153945269-71680143-e9f6-48c7-91d9-03f78a714ead.png)
 
 
 
- <h3 align="left">Folders management page:</h3>
+ <h3 align="left">Folders Management Page:</h3>
 
  
 ![folder](https://user-images.githubusercontent.com/78790570/153945362-fcf34bd9-b421-4c74-b543-e94cd0e9ad46.PNG)
