@@ -1,7 +1,7 @@
 Udash - laravel
 ==============
 
-A simple application for a university admin to connect students and professors and simplify file sharing between them.
+A laravel application for a University Social Media System that manages admins students and professors and connect them together, it simplifies files and information sharing between them, it also contains some content detection and analysis that allows  metadata and text extractions from various file types including images . 
 
 Usage
 -----
