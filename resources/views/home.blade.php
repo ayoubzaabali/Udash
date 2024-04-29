@@ -1,7 +1,7 @@
 @extends('layouts.homePage')
 
 @section('main')
-<div class="up">Collaborate in real-time, in any document, from anywhere
+<div class="up">Collaborate in real-time, Anytime, Anywhere
     . <a href="{{Route('login')}}">Check Now!</a></div>
 <div id="firstSection">
     <div class="container">
@@ -95,9 +95,7 @@
 
                 <ul class="reveal">
                     <li>Always On support</li>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consectetur iusto quia
-                        dignissimos tempore accusamus maxime in, eligendi quod, eius ea voluptatibus incidunt neque
-                        voluptatum eos doloribus eveniet veritatis ipsam aspernatur? Iusto non pariatur dolor.</p>
+                    <p>your go-to destination for uninterrupted assistance. From resolving technical issues to answering queries promptly, our round-the-clock support ensures you're never left in the dark. Dive into our extensive knowledge base, FAQs, and troubleshooting guides curated to address a wide range of concerns efficiently. Count on our dedicated team of experts to provide personalized assistance, keeping you empowered and informed at all times. Trust in our commitment to keeping you connected, supported, and satisfied, whenever you need us.</p>
                 </ul>
 
             </div>
