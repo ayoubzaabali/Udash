@@ -15,10 +15,29 @@
 
             <div class="card border-0">
                 
-                <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="user-list_length"><label>Show 
-                <form method="get" action="<?php echo e(route('prof.home')); ?>"><select onchange="this.form.submit()" name="show" aria-controls="user-list" class="custom-select custom-select-sm form-control form-control-sm"><option selected="true" disabled ></option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></form></label></div></div><div class="col-sm-12 col-md-6"><div  id="user-list_filter" class="dataTables_filter"><label style="float:right">Search:<input onkeyup="etdSH(this)" type="search" class="form-control form-control-sm" placeholder="" aria-controls="user-list"></label></div></div></div>
-                
-                    
+            <div class="row">
+            <div class="col-sm-12 col-md-6">
+                    <div id="user-list_filter" class="dataTables_filter">
+                      <label style="float:left">Search: <input onkeyup="etdSH(this)" type="search" style=" width:1000px" class="form-control form-control-sm" placeholder="" aria-controls="user-list">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="user-list_length">
+                      <label style="visibility:hidden">Show <form method="get" action="<?php echo e(route('prof.home')); ?>">
+                          <select style="visibility:hidden" onchange="this.form.submit()" name="show" aria-controls="user-list" class="custom-select custom-select-sm form-control form-control-sm">
+                            <option selected="true" disabled></option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                          </select>
+                        </form>
+                      </label>
+                    </div>
+                  </div>
+                 
+                </div>
                 
               
                 <div class="table-responsive">
