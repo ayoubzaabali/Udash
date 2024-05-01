@@ -20,10 +20,11 @@ COPY . .
 RUN composer update
 RUN chown -R www-data storage
 # Optimizing Configuration loading
-RUN php artisan config:cache
 RUN php artisan cache:clear
+RUN php artisan config:clear
+
 # Optimizing Route loading
-# RUN php artisan route:cache
+RUN php artisan route:clear
 # Optimizing View loading
 RUN php artisan view:cache
 RUN chown -R application:application .
