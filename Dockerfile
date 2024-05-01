@@ -21,6 +21,7 @@ RUN composer update
 RUN chown -R www-data storage
 # Optimizing Configuration loading
 RUN php artisan config:cache
+RUN php artisan cache:clear
 # Optimizing Route loading
 # RUN php artisan route:cache
 # Optimizing View loading
