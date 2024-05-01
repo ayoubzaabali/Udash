@@ -88,7 +88,7 @@
                 <div id="files" class="jstree jstree-1 jstree-default"  >
                                                    
 
-                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" style="overflow-y:scroll;max-height:600px">
+                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" id="filesScroll" >
                         <?php if(count($data['categories'] )==0): ?>
                         <small>no Catogories to show</small>
                         <?php else: ?>

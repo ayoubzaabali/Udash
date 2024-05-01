@@ -12,18 +12,18 @@
     <div class="row">
         <div class="col-xl-3 files-sidebar" >
             <div class="card border-0" >
-                @if(session("role")=="admin")
+                <!-- @if(session("role")=="admin")
                 @if(count($data['categories'])>0)
                   <div class="pure-button fuller-button red" data-toggle="modal" data-target="#archive">Archive</div>
                 @endif
-                @endif
+                @endif -->
                 
                 <div id="files" class="jstree jstree-1 jstree-default"  >
         
 
-                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" style="overflow-y:scroll;max-height:600px">
+                    <ul  id="filesScroll" class="jstree-container-ul jstree-children jstree-no-dots" role="group" >
                         @if(count($data['categories'] )==0)
-                        <small>no Catogories to show</small>
+                        <small>no Instances to show</small>
                         @else
                         @foreach($data['categories'] as $category)
                         <form method="post" action="{{ route('cat.homePost') }}">
@@ -106,7 +106,7 @@
                         </a>
                         <div class="dropdown-menu">
                              @if(session('role')=="admin" or session('role')=="prof" or session('role')=="emp" )
-                            <a class="dropdown-item"  data-toggle="modal" href="#exampleModalCenter">New Category</a>
+                            <a class="dropdown-item"  data-toggle="modal" href="#exampleModalCenter">New Instance</a>
                             @endif
                             @if(isset($data['catId']))
                             <a class="dropdown-item" data-toggle="modal" href="#exampleModal" >New File</a>
@@ -275,7 +275,9 @@
                                     <a href="#" class="dropdown-item" date="{{$file->date}}" original="{{$file->original}}" size="{{$file->size * 0.001}}" owner="{{$file->name}}" fileid="{{url('/').'/download/'.$file->id}}" data-sidebar-target="#view-detail">View
                                         Details</a>
                                     <a href="#" onclick="deleteFile(this)" fileid="{{$file->id}}" class="dropdown-item">Delete</a>
+                              
                                 </div>
+                        
                             </div>
                         </td>
                     </tr>
@@ -549,6 +551,11 @@
      @endif
       @endif    
     <div onclick="Delete(this)" data="{{$data['catId']}}" class="pure-button fuller-button red">DELETE</div>
+    @if(session("role")=="admin")
+                @if(count($data['categories'])>0)
+                  <div class="pure-button fuller-button red" data-toggle="modal" data-target="#archive">Archive All</div>
+                @endif
+                @endif
 
 </div>   </h2>
              

@@ -88,9 +88,9 @@
                 <div id="files" class="jstree jstree-1 jstree-default"  >
                                                    
 
-                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" style="overflow-y:scroll;max-height:600px">
+                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" id="filesScroll" >
                         @if(count($data['categories'] )==0)
-                        <small>no Catogories to show</small>
+                        <small>no Instances to show</small>
                         @else
                         @foreach($data['categories'] as $category)
                         <form method="post" action="{{ route('cat.archivehomePost') }}">

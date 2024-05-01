@@ -1733,8 +1733,15 @@
             </svg>
             <!-- <img src="<?php echo e(asset('assets/media/image/map.jpg')); ?>" style="width:100%"> -->
         </div>
+        <script>
+            var my_func = function(event) {
+   
+   event.preventDefault();
+   
+}
+        </script>
         <div class="column">
-            <form action="/action_page.php">
+            <form action="" onsubmit="my_func(event)">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 <label for="lname">Last Name</label>

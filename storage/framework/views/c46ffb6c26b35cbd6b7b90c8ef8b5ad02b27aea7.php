@@ -12,18 +12,18 @@
     <div class="row">
         <div class="col-xl-3 files-sidebar" >
             <div class="card border-0" >
-                <?php if(session("role")=="admin"): ?>
+                <!-- <?php if(session("role")=="admin"): ?>
                 <?php if(count($data['categories'])>0): ?>
                   <div class="pure-button fuller-button red" data-toggle="modal" data-target="#archive">Archive</div>
                 <?php endif; ?>
-                <?php endif; ?>
+                <?php endif; ?> -->
                 
                 <div id="files" class="jstree jstree-1 jstree-default"  >
         
 
-                    <ul class="jstree-container-ul jstree-children jstree-no-dots" role="group" style="overflow-y:scroll;max-height:600px">
+                    <ul  id="filesScroll" class="jstree-container-ul jstree-children jstree-no-dots" role="group" >
                         <?php if(count($data['categories'] )==0): ?>
-                        <small>no Catogories to show</small>
+                        <small>no Instances to show</small>
                         <?php else: ?>
                         <?php $__currentLoopData = $data['categories']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <form method="post" action="<?php echo e(route('cat.homePost')); ?>">
@@ -108,7 +108,7 @@
                         </a>
                         <div class="dropdown-menu">
                              <?php if(session('role')=="admin" or session('role')=="prof" or session('role')=="emp" ): ?>
-                            <a class="dropdown-item"  data-toggle="modal" href="#exampleModalCenter">New Category</a>
+                            <a class="dropdown-item"  data-toggle="modal" href="#exampleModalCenter">New Instance</a>
                             <?php endif; ?>
                             <?php if(isset($data['catId'])): ?>
                             <a class="dropdown-item" data-toggle="modal" href="#exampleModal" >New File</a>
@@ -277,7 +277,9 @@
                                     <a href="#" class="dropdown-item" date="<?php echo e($file->date); ?>" original="<?php echo e($file->original); ?>" size="<?php echo e($file->size * 0.001); ?>" owner="<?php echo e($file->name); ?>" fileid="<?php echo e(url('/').'/download/'.$file->id); ?>" data-sidebar-target="#view-detail">View
                                         Details</a>
                                     <a href="#" onclick="deleteFile(this)" fileid="<?php echo e($file->id); ?>" class="dropdown-item">Delete</a>
+                              
                                 </div>
+                        
                             </div>
                         </td>
                     </tr>
@@ -553,6 +555,11 @@
      <?php endif; ?>
       <?php endif; ?>    
     <div onclick="Delete(this)" data="<?php echo e($data['catId']); ?>" class="pure-button fuller-button red">DELETE</div>
+    <?php if(session("role")=="admin"): ?>
+                <?php if(count($data['categories'])>0): ?>
+                  <div class="pure-button fuller-button red" data-toggle="modal" data-target="#archive">Archive All</div>
+                <?php endif; ?>
+                <?php endif; ?>
 
 </div>   </h2>
              

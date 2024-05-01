@@ -313,9 +313,44 @@
   border-radius: 50%;
 }
 
+#filesScroll{
+  /* overflow-y:scroll; */
+  max-height:600px;
+  padding-right:10px;
+}
+
+#filesScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#filesScroll::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#filesScroll::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
     </style>
 </head>
 <body onload="setRecipient()">
+<script>
+  window.onload=()=>{
+    var positionInfo = document.querySelector('#filesScroll').getBoundingClientRect();
+    if( positionInfo.height <=590){
+    document.querySelector('#filesScroll').style.overflowY ='hidden';
+  }else{
+    document.querySelector('#filesScroll').style.overflowY ='scroll';
+  }
+  }
+ 
+
+</script>
      <!-- Main scripts -->
 <script src="<?php echo asset('vendors/bundle.js')  ?>"></script>
 <script src="cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
@@ -649,7 +684,7 @@
         <!-- begin::navigation -->
         <div class="navigation" style="overflow-y:scroll ;scrollbar-width: none;-ms-overflow-style: none;">
             <div class="logo">
-                <a href=index-2.html>
+                <a href="{{route('dash')}}" >
                     <img style="width:100%;height:auto;" src="<?php echo asset('assets/media/image/logo.png')  ?>" >
                 </a>
             </div>
@@ -663,7 +698,7 @@
                     </a>
                 </li>
                 @endif
-                 @if(isset($data['catId']) && !isset($data['archiveId']))
+                 <!-- @if(isset($data['catId']) && !isset($data['archiveId']))
                  @if(session('role')=="admin" or session('role')=="prof" or session('role')=="emp" )
 
                  <li data-toggle="modal" data-target="#sendingMail">
@@ -675,7 +710,7 @@
                     </a>
                 </li>
                 @endif
-                @endif
+                @endif -->
                 
                 <li>
                     <a  href="{{route('cat.home')}}">
@@ -747,7 +782,7 @@
             
             <!-- Footer -->
             <footer class="content-footer d-print-none">
-                <div>© 2020 Ayoub Zaabali - </div>
+                <div>© 2024 Ayoub Zaabali - </div>
               
             </footer>
             <!-- ./ Footer -->
