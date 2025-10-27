@@ -12,7 +12,7 @@ Testing the Project
     composer install
     php artisan migrate
 
-screenshots 
+Screenshots 
 ------
 
 functionality overview with screenshots.
